@@ -23,11 +23,13 @@ jobs:
         run: |
              if [ "$RUNNER_OS" == "Linux" ]; then
                   echo 'LINUX'
-                  echo 'Node Version ${node -v}'
+                  nodev = $(node -v)
+                  echo 'Node Version ${nodev}'
                   sleep 30
              else
                   echo 'MACOS'
-                  echo 'Node Version ${node -v}'
+                  nodev = $(node -v)
+                  echo 'Node Version ${nodev}'
                   sleep 30
              fi
         shell: bash
